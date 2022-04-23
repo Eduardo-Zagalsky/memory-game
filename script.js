@@ -53,15 +53,7 @@ function createDivsForColors(colorArray) {
     // append the div to the element with an id of game
     gameContainer.append(newDiv);
 
-    //start with colors to remember
-    newDiv.style.backgroundColor = newDiv.className;
-    setTimeout(function () {
-      newDiv.style.background = "white";
-    }, 5000);
     newDiv.addEventListener("click", handleCardClick);
-    if (newDiv.classList.contains("clicked")) {
-      newDiv.style.background = "white";
-    }
   }
 }
 
