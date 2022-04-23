@@ -69,13 +69,9 @@ function handleCardClick(event) {
       target1 = target1 || temp;
       target2 = temp === target1 ? null : temp;
     }
-    if (!event.target.classList.contains("clicked")) {
-      event.target.style.backgroundColor = event.target.className;
-      event.target.classList.add("clicked");
-    } else if (event.target.classList.contains("clicked")) {
-      event.target.classList.remove("clicked");
-      event.target.style.backgroundColor = "white";
-    }
+    event.target.style.backgroundColor = event.target.className;
+    event.target.style.backgroundColor = event.target.className;
+
     if (target1.className === target2.className) {
       target1.classList.add("matched");
       target2.classList.add("matched");
@@ -89,8 +85,6 @@ function handleCardClick(event) {
         target2.style.backgroundColor = "white";
         target1 = null;
         target2 = null;
-        target1.classList.remove("clicked");
-        target2.classList.remove("clicked");
       }, 1000);
     }
   }
