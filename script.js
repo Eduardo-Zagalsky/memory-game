@@ -68,6 +68,8 @@ function handleCardClick(event) {
     if (!target1 || !target2) {
       target1 = target1 || temp;
       target2 = temp === target1 ? null : temp;
+    }else{
+      return;
     }
     event.target.style.backgroundColor = event.target.className;
     event.target.style.backgroundColor = event.target.className;
